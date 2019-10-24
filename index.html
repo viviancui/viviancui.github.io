@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='mystyle.css')}}" media="screen" />
+  <script type="text/javascript" src="{{ url_for('static', filename='index.js')}}"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+  <title>Vivian Cui | UX Researcher</title>
+  <style>
+
+    @import "compass/css3";
+    $height-footer: 60px;
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .banner-img img{
+      width: 200px;
+      height: 200px;
+      /* padding:1px; */
+      margin: 7px;
+      /* border:0.7px solid #444343; */
+    }
+
+    body{
+      font-family: 'Poiret One', cursive;
+    }
+
+    nav li{
+      padding: 0px 15px;
+    }
+
+    .nav-pills a{
+      color: #444343;
+    }
+
+    .nav>li>a.active,
+    .nav>li>a:hover,
+    .nav>li>a:focus{
+      background-color: #444343 !important;
+      color: white;
+    }
+
+    #footer a{
+      padding: 0px;
+      margin: 7px;
+    }
+
+    .container h4{
+      padding-top: 240px;
+      padding-bottom: 40px;
+    }
+
+    #cvdiv{
+      padding-bottom: 240px;
+    }
+
+    #aboutdiv{
+      padding-bottom: 50px;
+    }
+
+    /* .overlay{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #008CBA;
+    }
+    .banner-img:hover .overlay{
+      opacity: 1;
+    }
+    .image{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .text {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    } */
+  </style>
+</head>
+
+<body data-spy="scroll" data-offset="200" data-target="#navbar-homepage">
+    <nav id="navbar-homepage" class="navbar navbar-dark sticky-top flex-column dark" style="background-color: white;">
+      <a class="navbar-brand" href="/"><img src="logo_2.png" width="300"></a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#data">Data</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#research">Research</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#design">Design</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#works">Others</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#cv">CV</a>
+        </li>
+      </ul>
+    </nav>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div data-spy="scroll" data-target="#navbar-homepage" data-offset="0" class="col-md-8 text-center" >
+        <div id="aboutdiv">
+          <h4 id="about">Key Words</h4>
+          <p>Data-driven &ensp;&ensp;|&ensp;&ensp; Information Cascade &ensp;&ensp;|&ensp;&ensp; Conformation &ensp;&ensp;|&ensp;&ensp; Music</p>
+          <p>3 years User Experience Researcher</p>
+          <p>Master of Applied Psychology &ensp;&ensp;|&ensp;&ensp; Master of Science in Information</p>
+          <img>
+        </div>
+        <h4 id="data">Data Projects</h4>
+          <div class="row block-inline justify-content-center">
+              <div class="text-center banner-img">
+                <!-- <div class="overlay">
+                  <div class="text">Hello World</div>
+                </div> -->
+                <a href=""><img src="project_lyrics_2.png" class="rounded image" alt="..." style="height:auto;"></a>
+
+              </div>
+
+              <div class="text-center banner-img">
+                <img src="project_sec.png" class="rounded" alt="...">
+              </div>
+
+              <!-- <div class="text-center banner-img">
+                <img src="..." class="rounded" alt="...">
+              </div> -->
+          </div>
+        <h4 id="research">UX Research Projects</h4>
+          <div class="row block-inline justify-content-center">
+              <div class="text-center banner-img">
+                <img src="project_reading.png" class="rounded" alt="...">
+              </div>
+
+              <div class="text-center banner-img">
+                <img src="project_jobsearching.png" class="rounded" alt="...">
+              </div>
+
+              <div class="text-center banner-img">
+                <img src="project_sql.png" class="rounded" alt="...">
+              </div>
+
+              <!-- <div class="text-center banner-img">
+                <img src="project_abortion.png" class="rounded" alt="...">
+              </div> -->
+          </div>
+        <h4 id="design">Design Works</h4>
+          <div class="row block-inline justify-content-center">
+              <div class="text-center banner-img">
+                <img src="project_vi.png" class="rounded" alt="...">
+              </div>
+
+              <div class="text-center banner-img">
+                <img src="project_alphabet.png" class="rounded" alt="...">
+              </div>
+
+
+          </div>
+        <h4 id="works">Others</h4>
+          <div class="row block-inline justify-content-center">
+              <div class="text-center banner-img">
+                <img src="others_dog.png" class="rounded" alt="...">
+              </div>
+
+              <div class="text-center banner-img">
+                <img src="others_way.png" class="rounded" alt="...">
+              </div>
+
+              <div class="text-center banner-img">
+                <img src="others_hutong.png" class="rounded" alt="...">
+              </div>
+          </div>
+          <div class="row block-inline justify-content-center">
+              <div class="text-center banner-img">
+                <img src="others_fuji.png" class="rounded" alt="...">
+              </div>
+
+              <div class="text-center banner-img">
+                <img src="others_light.png" class="rounded" alt="...">
+              </div>
+
+              <div class="text-center banner-img">
+                <img src="others_flower.png" class="rounded" alt="...">
+              </div>
+          </div>
+        <h4 id="cv">CV</h4>
+          <div id="cvdiv">
+            <a href="CV_VivianCui.pdf" target="blank"><button type="button" class="btn btn-dark">Download CV</button></a>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer font-small indigo mt-5" id="footer">
+  <div class="container">
+    <div class="row justify-content-center">
+        <a class="navbar-brand" href="https://github.com/viviancui" target="blank"><img src="GitHub.png" width="20"></a>
+        <a class="navbar-brand" href="https://www.linkedin.com/in/vivian-cui-b0224a32/" target="blank"><img src="linkedin.png" width="70"></a>
+    </div>
+  </div>
+    <div class="footer-copyright text-center py-4 text-black">© 2018 Copyright: Vivian Cui
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+  <!-- <script>
+  var offset = 240;
+
+  $('.nav-pills a').click(function(event) {
+      event.preventDefault();
+      $($(this).attr('href'))[0].scrollIntoView();
+      scrollBy(0, -offset);
+  });
+  </script> -->
+
+</body>
+</html>
