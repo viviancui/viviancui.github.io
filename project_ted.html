@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='mystyle.css')}}" media="screen" />
+  <script type="text/javascript" src="{{ url_for('static', filename='index.js')}}"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+  <title>Vivian Cui | Data Analyst & UX Researcher</title>
+  <style>
+
+    @import "compass/css3";
+    $height-footer: 60px;
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .banner-img img{
+      width: 200px;
+      height: 200px;
+      /* padding:1px; */
+      margin: 7px;
+      /* border:0.7px solid #444343; */
+    }
+
+    body{
+      font-family: 'Poiret One', cursive;
+    }
+
+    #footer a{
+      padding: 0px;
+      margin: 7px;
+    }
+
+    .container h4{
+      padding-top: 100px;
+      padding-bottom: 40px;
+    }
+
+  </style>
+</head>
+
+<body data-spy="scroll" data-offset="200" data-target="#navbar-homepage">
+    <nav id="navbar-homepage" class="navbar navbar-dark sticky-top flex-column dark" style="background-color: white;">
+      <a class="navbar-brand" href="index.html"><img src="logo_2.png" width="300"></a>
+    </nav>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <!-- <i class="material-icons" style="float: left;">arrow_left</i> -->
+          <i class="material-icons" style="float: right;">arrow_right</i>
+          <h4>The Analysis of TED Talks</h4>
+          <p>Besides of watching the TED talks and get the idea, passion, and inspiration from it, I dig into the <a href="https://www.kaggle.com/rounakbanik/ted-talks">TED Talks dataset</a> and try to find some interesting things that cannot be discovered via a single talk.</p>
+
+          <br/>
+
+          <p>Key Words<br/> Natural Language Processing &ensp;&ensp;|&ensp;&ensp; Exploratory Analysis <br/> NLTK &ensp;&ensp;|&ensp;&ensp; spaCy &ensp;&ensp;|&ensp;&ensp; Pandas & Seaborn</p>
+
+          <!-- <a href="#" target="blank"><button type="button" class="btn btn-dark">Try It Now</button></a><br/> -->
+          <a href="project_lyrics.html" target="blank" class="btn btn-dark">Analysis Code in Jupyter Notebook</a>
+
+          <br/>
+          <h4>Question 1 <br/> Leverage talk scripts to find out how to become a cool person in your field.</h4>
+          <p>Methods</p>
+
+          <p>Vectorize the speakers' occupation<br/>Vectorize the talks' topics<br/>Calculate the cos distance of the speaker’s occupation and the topics of their talk<br/>Here are the 3 talks with the lowest similarity.</p>
+          <div class="row block-inline justify-content-center">
+              <div class="card" style="width: 14rem;">
+                <img src="alex_laskey.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Alex Laskey</p>
+                  <a class="card-text" href="https://www.ted.com/talks/alex_laskey_how_behavioral_science_can_lower_your_energy_bill">How behavioral science can lower your energy bill</a>
+                </div>
+              </div>
+              <div class="card" style="width: 14rem;">
+                <img src="gabby_giffords.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Gabby Giffords</p>
+                  <a class="card-text" href="https://www.ted.com/talks/alex_laskey_how_behavioral_science_can_lower_your_energy_bill">Be passionate. Be courageous. Be your best.</a>
+                </div>
+              </div>
+              <div class="card" style="width: 14rem;">
+                <img src="malte_spitz.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Malte Spitz</p>
+                  <a class="card-text" href="https://www.ted.com/talks/alex_laskey_how_behavioral_science_can_lower_your_energy_bill">Your phone company is watching</a>
+                </div>
+              </div>
+
+              <br/>
+              <h4>I have also implemented a webpage for searching the occupation you are interested in corresponding with their similarity value.</h4>
+              <p>The heroku app may sleep without people visiting. So please wait about 20 seconds for the page to open, thanks!</p>
+              <a href="https://obscure-thicket-41788.herokuapp.com" target="blank" class="btn btn-dark">Search the Occupations</a>
+          </div>
+
+          <br/>
+
+          <h4>Question 2<br/>What are the popular TED talks look like?</h4>
+          <p>Methods<br/>Split the 'tags' column into rows & group by this new tag column<br/>Calculate mean of each tag group<br/>Order by #views, #comments, and the value of #comments divided by #views separately</p>
+          <br/>
+          <p>Findings</p>
+          <p>Finding 1: People are more likely to watch the talks which have the interesting content or about introspect.</p>
+          <p><img src="top10_views_tag.png" width="550px"></p>
+          <p>Finding 2: People are more likely to express their own opinions after watching the talks about religion and psychology.</p>
+          <p><img src="top10_comments_tag.png" width="550px"></p>
+          <p>Finding 3: Combine the views and the participation, global issues, culture, and science are the top 3 topics. Also, the TEDx talks very successful on this criteria.</p>
+          <p><img src="top10_comments_views.png" width="750px"></p>
+          <br/>
+
+          <h4>Question 3<br/>How does the viewers’ taste change over time?</h4>
+          <p>Finding:<br/>TED viewers’ tastes are not fluctuated too much in the past years.</p>
+
+          <p>Methods:<br/>I’ve selected 3 topics at the top of the #comments/#views rank.</p>
+          
+          <p>Technology</p>
+          <p>There is a view peak in 2007.  Besides of that, however, the technology talk kind of keep pile up in excess of requirement in the past 20 years.</p>
+          <p><img src="talks_about_tech.png" width="450px"></p>
+
+          <p>Science</p>
+          <p>Compare to technology topic, TED viewers have more passion about science. Let along the two sharpe peaks in 2002 and 2008. The #views created by the science talks are very close and higher than the %talks TED provide for most of the time.</p>
+          <p><img src="talks_about_science.png" width="450px"></p>
+
+          <p>Global Issues</p>
+          <p>We can clearly see the lagging in the plot of global issues, especially during 2003 to 2009. This may be a undirected prove of the sensitivity of TED, like they recorded the talks even before the specific global issue be noticed by people and mass media.</p>
+          <p><img src="talks_about_global.png" width="450px"></p>
+
+          <br/>
+          <br/>
+          <br/>
+
+          <a href="project_lyrics.html" target="blank" class="btn btn-dark">Analysis Code in Jupyter Notebook</a>
+
+
+          <!-- <i class="material-icons" style="float: left;">arrow_left</i> -->
+          <a href="project_sec.html" style="color:black;"><i class="material-icons" style="float: right;">arrow_right</i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer font-small indigo mt-5" id="footer">
+    <div class="container">
+      <div class="row justify-content-center">
+          <a class="navbar-brand" href="https://github.com/viviancui" target="blank"><img src="GitHub.png" width="20"></a>
+          <a class="navbar-brand" href="https://www.linkedin.com/in/vivian-cui-b0224a32/" target="blank"><img src="linkedin.png" width="70"></a>
+      </div>
+    </div>
+      <div class="footer-copyright text-center py-4 text-black">© 2019 Copyright: Vivian Cui
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
